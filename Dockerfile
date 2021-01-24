@@ -21,7 +21,6 @@ RUN     apt-get update \
             libzip-dev \
             curl \
             git \
-            nodejs \
             libonig-dev \
             --no-install-recommends \
     &&  yes | pecl install mcrypt-1.0.3 \
