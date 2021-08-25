@@ -22,6 +22,7 @@ RUN     apt-get update \
             curl \
             git \
             libonig-dev \
+            unzip \
             --no-install-recommends \
     &&  yes | pecl install mcrypt-1.0.3 \
     &&  docker-php-ext-enable mcrypt \
