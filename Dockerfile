@@ -1,9 +1,8 @@
-FROM php:7.4-fpm
+FROM php:8.2-fpm
 LABEL maintainer="antonio@antonioandra.de"
 
 RUN     apt-get update \
     &&  apt-get install -qy \
-            libmcrypt-dev \
             libicu-dev \
             libmagickwand-dev \
             libicu-dev \
@@ -13,7 +12,6 @@ RUN     apt-get update \
             libpng-dev \
             libfreetype6-dev \
             libssl-dev \
-            libmcrypt-dev \
             libxml2-dev \
             libbz2-dev \
             libjpeg62-turbo-dev \
@@ -24,8 +22,6 @@ RUN     apt-get update \
             libonig-dev \
             unzip \
             --no-install-recommends \
-    &&  yes | pecl install mcrypt-1.0.3 \
-    &&  docker-php-ext-enable mcrypt \
     &&  docker-php-ext-configure bcmath --enable-bcmath \
     &&  docker-php-ext-configure pcntl --enable-pcntl \
     &&  docker-php-ext-configure pdo_mysql --with-pdo-mysql \
