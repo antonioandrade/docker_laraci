@@ -1,6 +1,7 @@
 FROM php:8.2-fpm
 LABEL maintainer="antonio@antonioandra.de"
 
+
 RUN     apt-get update \
     &&  apt-get install -qy \
             libicu-dev \
